@@ -1,0 +1,49 @@
+*****************************************************************************
+                           Reflection
+                          Project - #5-1
+Full Name  : SuJung Song
+Student ID#: 172745218
+Email      : ssong49@myseneca.ca
+Section    : OOP244NDD
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+What I had learn through this project 5-1 are..
+
+1. When I used dynamically polymorphic object, I have to use keyword "virtual" 
+   in front ot Base class's desturtor. If I did not, derived class would not be
+   deleted. It will make some memory leaks.
+   - for instance, PosApp class has m_Iptr pointer, which pointing to Item class.
+   - perishable and nonperishable classes inherit Item class.
+   - depends on the condition, m_Iptr can point to perishable or nonperishabel using
+     dynamically polymorphic. (new keyword)
+   - I have to delete m_Iptr because I assinged new space in heap area.
+   - so put "virtual" keyword in base class destructor, let compiler know there are 
+     another destructor on derived class. 
+   - After that, delete m_Iptr[i] using for loop, one by one.
+   - m_Iptr[i] refers to single pointer, so I do not need to put [ ] bracket which means
+     multiple pointers.
+   - Furthermore, I tried to erase m_Name which is pointer. However I do not need to
+     remove it in PosApp. This is because in Item class's destructor, I already set delete for it.
+   
+2. Once I load file, do not use setEmpty.
+   This will make the all data set empty, which means I can not save all things what i do.
+
+3. when ifstream is good state, and Iptr array is not full.
+   I used those validtion "input && !input.eof() && m_nptr < MAX_NO_ITEMS"
+
+4. perishable and nonperishable inherite Item. It means, when I use pointer or reference 
+   of base class, I can point to perishable or nonperishable.
+
+5. ifstream input(m_fileName);
+
+   ifstream input; //those are same way  
+   input.openfileName);
+
+6. helperfunction is gobal. so whatever class can use it.
+   for instance, PosIO class has operator>> as helper function.
+   Even though PosApp did not inherit PosIO, PosApp can use it.
