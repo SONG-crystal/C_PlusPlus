@@ -1,0 +1,2 @@
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS01\w1\x64\Debug\w1.exe
+C:\Users\cryst\OneDrive\바탕 화면\GitHub\C_PlusPlus\lab01\x64\Debug\w1.exe

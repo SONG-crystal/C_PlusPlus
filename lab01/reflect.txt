@@ -1,0 +1,56 @@
+*****************************************************************************
+                           Reflection
+                          Workshop - #1
+Full Name  : SuJung Song
+Student ID#: 172745218
+Email      : ssong49@myseneca.ca
+Section    : OOP345NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. what is the effect of the keyword "constexpr"
+constexpr is a powerful tool that can be used to improve performance.
+it evaluated at compile-time not run-time
+
+2. Why rule of three are necessary and in what situation a class must implement them. 
+When data has resources, which mean pointer pointing address at heap memory, rule of 3 must implemented it
+There are posibility to copy or assign with resources. Without rule of three, shallow copy will cause errors.
+This is because pointer always pointing to the address of something even it has copied.
+That is the reason why we have to deal with(delete and re-assign it) our memory when data has resources.
+
+-extern keyword used in header file (now, all modules can use this!)
+-would define and initialize it in cpp file
+ //header                         //cpp
+ extern double g_taxrate;         double g_taxrate = 0.0;
+ extern double g_discount;        double g_discount = 0.0;
+
+-C style null terminated string of up to 10 characters including null byte terminator means "char vaiableName[10]"
+
+-for safe state for all data members, can use keywords curly braces {}
+
+-include libray must need when using..
+ #include <iomanip> //for setw
+ #include <cstring> //for string
+ #include <string>  //for getline
+
+-style
+  cout << left << setw(4) << ... << endl;
+  cout << fixed;
+  cout << setprecision(2) << ... << endl; //"fixed" and "setprecision" are get together when you want to set precision
+         
+-C++17
+project right click - properties - C++ Language Standard - 17!
+
+-When the program is started with the command,
+project right click - properties - Debugging - Command Arguments - type it
+
+-query
+display(), bool(), getStatus() functions are queries, put const keyword is always good practice
+
+-virtual
+virtual destructor is always good for preventing memory leaks
+
