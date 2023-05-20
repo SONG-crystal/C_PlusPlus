@@ -14,13 +14,36 @@ piece of work is entirely of my own creation.
 
 1. what is the effect of the keyword "constexpr"
 constexpr is a powerful tool that can be used to improve performance.
-it evaluated at compile-time not run-time
+It evaluated at compile-time not run-time
+In this lab, we defined constexpr int MAX_CARS=100; in global area
+Which means it has guarantee MAX_CARS became as a constant and cannot be modified at runtime.
+sdds::Cars recordedCarsOnAds[MAX_CARS]; // that is why these codes are working properly.
+Index of array has always need constant value.
 
 2. Why rule of three are necessary and in what situation a class must implement them. 
 When data has resources, which mean pointer pointing address at heap memory, rule of 3 must implemented it
 There are posibility to copy or assign with resources. Without rule of three, shallow copy will cause errors.
 This is because pointer always pointing to the address of something even it has copied.
 That is the reason why we have to deal with(delete and re-assign it) our memory when data has resources.
+
+3.the difference between internal and external linkage citing examples from your code
+external linkage, keyword "extern" used in header file, it connected names are in different scopes in differenct modules.
+now g_taxrate and g_discount variables can be used in any modules! they are sharing their address
+
+internal linkage, keyword "static" used. it connected names are in difference scopes in same module.
+in display function, we used "Static" keyword (static int m_counter =1).
+So, in this carads module, m_counter has share its own address.
+
+4. what are static variables and how are they useful in your solution.
+static variable shared its address in the same module.
+we do not need to set variable multiple times
+
+5. the changes that you made in upgrading your Cars class in part 2.
+- m_brand changed to pointer, with has resources. That is why I implemented rule of three (copy constructor, copy assignment, and destructor)
+- I used string::length, string::c_str libraries, and changed tempBrand variable char to string
+
+
+
 
 -extern keyword used in header file (now, all modules can use this!)
 -would define and initialize it in cpp file

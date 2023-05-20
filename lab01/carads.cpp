@@ -1,9 +1,14 @@
+// Workshop 1 
+// Student Name  : SuJung Song 
+// Student Number: 172745218
+// Student Email : ssong49@myseneca.ca
+// Submit Date   : May/19/2023
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>
 #include <iomanip> //for setw
-#include <cstring> //for string
-#include <string>  //for getline
+#include <cstring> 
+#include <string> 
 #include "carads.h"
 
 double g_discount = 0.0;
@@ -33,12 +38,7 @@ namespace sdds
    }
    Cars::Cars()
    {
-      m_brand = nullptr;
-      m_model[0] = '\0';
-      m_year=0;
-      m_price=0.0;
-      m_used='N';
-      m_sale=false;
+
    }
    Cars::Cars(const Cars& Ro)
    {
@@ -47,7 +47,9 @@ namespace sdds
    Cars& Cars::operator=(const Cars& Ro)
    {
       if (this != &Ro) {
-         m_brand = Ro.m_brand;
+
+         delete[] m_brand;
+         m_brand = nullptr;
 
          if (Ro.m_brand != nullptr){
             m_brand = new char[strlen(Ro.m_brand) + 1];
@@ -58,7 +60,7 @@ namespace sdds
             m_price = Ro.m_price;
             m_used = Ro.m_used;
             m_sale = Ro.m_sale;
-            m_status = Ro.m_status;
+            m_status= Ro.m_status;
          }
       }
       return *this;
@@ -69,7 +71,7 @@ namespace sdds
    }
    std::istream& Cars::read(std::istream& is)
    {
-      char tempBrand[101];
+      string tempBrand;
 
       delete[] m_brand;
       m_brand = nullptr;
@@ -78,16 +80,16 @@ namespace sdds
          is >> m_used; 
          is.ignore();
          
-         is.getline(tempBrand, 100, ',');     
-         m_brand = new char[strlen(tempBrand) + 1];
-         strcpy(m_brand, tempBrand);
+         getline(is, tempBrand, ',');     
+         m_brand = new char[tempBrand.length() + 1];
+         strcpy(m_brand, tempBrand.c_str());
 
          is.getline(m_model, 15, ',');
          is >> m_year;
          is.ignore();
          is >> m_price;
          is.ignore();
-         is >> m_status; 
+         is >> m_status;
          is.ignore();
          if (m_status == 'Y') {
             m_sale = true;
@@ -100,9 +102,9 @@ namespace sdds
    }
    void Cars::display(bool reset) const
    {
-      static int m_counter = 1;
+      static int m_counter = 1; //do not use global
 
-      if (reset) 
+      if (reset) //if parameter is true, reset initial value
          m_counter = 1;
       
       if (m_model) {
@@ -127,6 +129,5 @@ namespace sdds
    {
       return m_used == 'N' ? true : false;
    }
-   //int Cars::m_counter = 1;
 
 }

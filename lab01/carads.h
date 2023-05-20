@@ -1,3 +1,9 @@
+// Workshop 1 
+// Student Name  : SuJung Song 
+// Student Number: 172745218
+// Student Email : ssong49@myseneca.ca
+// Submit Date   : May/19/2023
+
 #ifndef SDDS_CARADS_H
 #define SDDS_CARADS_H
 
@@ -13,12 +19,11 @@ namespace sdds
    class Cars {
       char* m_brand{};
       char m_model[15]{};
-      int m_year{};
+      size_t m_year{};
       double m_price{};
       char m_used{};
       bool m_sale{};
-      char m_status{};
-
+      char m_status{}; //Add my private member
    public:
       Cars(); 
       

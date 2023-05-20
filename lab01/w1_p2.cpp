@@ -1,9 +1,3 @@
-// Workshop 1 
-// Student Name  : SuJung Song 
-// Student Number: 172745218
-// Student Email : ssong49@myseneca.ca
-// Submit Date   : May/18/2023
-
 #include <iostream>
 #include <iomanip>
 #include <fstream>
