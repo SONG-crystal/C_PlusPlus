@@ -1,0 +1,47 @@
+*****************************************************************************
+                           Reflection
+                          Workshop - #2
+Full Name  : SuJung Song
+Student ID#: 172745218
+Email      : ssong49@myseneca.ca
+Section    : OOP345NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. the reason for the significant time difference between the copy and move operations.
+   copy constructor and copy assignment
+   --> they creating copy contents of the sources, perform allocate(re-sizing) and deep copy.
+
+   move constructor and move assignment
+   --> they did not allocate(re-sizing) it, just pointing the new address using pointer.
+       That is why move operations is much faster because they avoid data copying
+   
+   For instance, there is a furniture in house. when we want to move to new house, 
+   Do we copy(re-make) the old furniture and take the copy one to new house then destroy the orinal one? 
+   NO, it will take a huge time! it is exactly same situation when we use copy operartions. 
+   We can just move the old furniture to our new house. 
+   It is simple, easy and do not need waste time! It is the same way how move operations work.
+
+2. describe approach taken to read the input file (tennis-data.csv)
+   in the TennisLog constructor and populate the dynamic array. 
+   Is there any way to avoid rereading the file?
+   --> I used "ifstream" for open/read the input file.
+   if input file is open successful, then I try to read file line by line using "getline"
+   then clear(), seekg(0) were used for rewind file pointer.
+   To avoid re-reading file, there is a way to save that information somewhere as you read it line by line.
+
+3. in the links above to chrono library, 
+   you were directed to use a steady_clock to take a timestamp.
+   Do some research and explain the difference between a steady_clock and a system_clock.
+   Are they the same? When should each one be used?
+
+   Both of them are in the same library, <chrono>. However, they are different.
+   steady_clock: it works like a stopwatch, so we can keep running system time.
+                 So it is useful measuring code execution.
+                 for example, in our lab, we can check the significant time difference between the copy and move operations.
+   system_clock: represent the real-time clock.
+                 So it has benefit used for getting the current time or dealing with real-time world events.
