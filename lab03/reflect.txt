@@ -1,0 +1,53 @@
+*****************************************************************************
+                           Reflection
+                          Workshop - #3
+Full Name  : SuJung Song (a.k.a. Crystal)
+Student ID#: 172745218
+Email      : ssong49@myseneca.ca
+Section    : OOP345NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1. The Queue must have only a header file.
+Explain in the reflection why we do not split this module into *.h and *.cpp 
+like you did in the previous workshops.
+--> I tried to make "Queue.cpp file" in my workshop. As soon as I create it, LINKing error message pops up.
+    If we implemented "template" code/keyword in .cpp file, compiler won't be able to recognize it as template.
+    That is the reason why we have to implemented it into .h file. 
+    So, erase the .cpp file even there is nothing inside in it!
+
+
+2. Dictionary objects that have the same term are equal or the same in this workshop.
+In the reflection justify why it was necessary to add each one of the members you have decided to add.
+--> operator== 
+: In UniqueQueue class, we want to compare the elements one by one 
+in the m_list(whatever types, long, double, Dictionary..), to check if they are matching.
+The right hand side parameter is delared as template type T, so it can be convert to any type.
+So, it must be declared in the member function of the Dictionary.
+
+--> operator<< 
+    display : Those functions are needed in Dictionary class as the similary purpose as above.
+
+--> Dictionary();  
+: If user did not set anything, compiler will give us deafault constructor automatically. However,
+In Dictionary class, parameterize constructor is already set by User (it was given by prof).
+Once we have set any constructor on my own at least one, compiler do not support any help to User.
+So we should implemented default constructor.
+
+3. the reason for specializing the push() member function.
+   --> We defined push function in Queue.h alreay, but we want to specify the special condition when it comes on "double" (if the difference between them is less then 0.005). That is the reason why we need to set specializing for it.
+
+4. the reason for defining the class variable outside the class definition.
+--> when we use STATIC, which can share its own data to in the same module, we should define it outside of the class.
+    if we define it in the class, whenever create the class object, it trigger defining multiple times.
+
+
+
+
+
+
+
