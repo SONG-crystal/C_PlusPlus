@@ -1,0 +1,50 @@
+*****************************************************************************
+                           Reflection
+                          Workshop - #4
+Full Name  : SuJung Song (a.k.a. Crystal)
+Student ID#: 172745218
+Email      : ssong49@myseneca.ca
+Section    : OOP345NEE
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+*****************************************************************************
+
+1.the difference between the implementations of a composition and an aggregation
+  -Composition can be described as an 'has a' relationship. It means, it refers to the strong relationships
+   between a component class(base class) and composing class(derived class). So, when we try to implemented
+   composition relationship, we have to control the lifetime of the componets such as allocate and deallocate
+   memories using keyword new and delete. For instance, in this workshop, Restaurant class and Reservation class
+   have Composition relationships. Indeed, whenever Restaurant class create, Reservation class should create togegher.
+   So when parameter Reservation is passed to Restaurant, then I should allocate memories for Reservations data 
+   as well as the array of Reservation pointer. Likewise, then the Restaurant class died, I have to control the
+   lifetime of Reservation using delete keyword.
+
+  -Aggregation can be described as a 'has not' realationship. Aggregate class and Aggregating class has
+   weaker version of composition. The creation and destruction of aggregate clss will not affected by aggregated class.
+   In this workshop, ConfirmationSender Class and Reservation Class has Aggregation relationship. 
+   They are related it but when Confirmation Class is created, Reservation Class is not need to created it.
+   Similarly, when Confirmation Class is died, I do not need to control the life time of Reservation Class's data.
+
+2.the difference between the implementations of move and copy functions in a composition and an aggregation
+  - Regardless of the relationship between Composition and Aggregation, copy constructor and move constructor works similarly
+    such as *this=resoure;  *this=move(resoure);
+
+  - However, in case of copy assignment and move assignment should consider in a different relationship.
+    In Composition relationships, we should consider the lifetime of composing class. 
+    Firstly, deallocate all Reservation's data one by one using for loop. Then, dellocate container of Reservation pointer.
+    If I need to implemented copy assingment, I will allocate memories of Container of Reservation
+    as well as all data of Reservation. If I need to implemented move assingment, then I will implemented shallow copy and
+    move the pointer.
+
+  - In Aggregation relationships, I do not consider about lifetime of aggreated class. So, I just dellocated container of 
+    Reservation's pointer, and shallow/deep copy and allocated it in copy assignment. Likewise, dellocated container of Reservation's 
+    pointer then sallow copy and move the pointer.
+    
+
+
+
+
+

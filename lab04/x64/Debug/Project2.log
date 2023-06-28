@@ -1,0 +1,40 @@
+﻿  ConfirmationSender.cpp
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\ConfirmationSender.cpp(70,22): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Reservation.cpp
+  Restaurant.cpp
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(45,13): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(49,13): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(52,28): error C2600: 'sdds::Restaurant::operator =': cannot define a compiler-generated special member function (must be declared in the class first)
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(71,28): error C2511: 'sdds::Restaurant &sdds::Restaurant::operator =(sdds::Restaurant &&)': overloaded member function not found in 'sdds::Restaurant'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(6): message : see declaration of 'sdds::Restaurant'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(73,10): error C2671: 'sdds::Restaurant::=': static member functions do not have 'this' pointers
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(74,38): error C2597: illegal reference to non-static member 'sdds::Restaurant::m_CNT'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(74,38): error C3867: 'sdds::Restaurant::m_CNT': non-standard syntax; use '&' to create a pointer to member
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(74,38): error C2568: '<': unable to resolve function overload
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(75,32): error C2597: illegal reference to non-static member 'sdds::Restaurant::m_reserPtr'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(75,32): error C3867: 'sdds::Restaurant::m_reserPtr': non-standard syntax; use '&' to create a pointer to member
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(75,32): error C2568: '[': unable to resolve function overload
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(76,29): error C2541: 'delete': cannot delete objects that are not pointers
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(78,10): error C2597: illegal reference to non-static member 'sdds::Restaurant::m_CNT'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(8): message : see declaration of 'sdds::Restaurant::m_CNT'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(81,10): error C2597: illegal reference to non-static member 'sdds::Restaurant::m_reserPtr'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(7): message : see declaration of 'sdds::Restaurant::m_reserPtr'
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.cpp(84,15): error C2671: 'sdds::Restaurant::=': static member functions do not have 'this' pointers
+  w4_p2.cpp
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\w4_p2.cpp(103,9): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\w4_p2.cpp(107,9): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\w4_p2.cpp(122,8): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\w4_p2.cpp(125,8): error C2280: 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': attempting to reference a deleted function
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24): message : compiler has generated 'sdds::Restaurant::operator =' here
+C:\Users\cryst\OneDrive\바탕 화면\3rd semester\OOP\WS04\part 2\Project2\Restaurant.h(24,4): message : 'sdds::Restaurant &sdds::Restaurant::operator =(const sdds::Restaurant &)': function was implicitly deleted because 'sdds::Restaurant' has a user-defined move constructor
+  Generating Code...
